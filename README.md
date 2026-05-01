@@ -1,4 +1,4 @@
-# 🏥 Healthcare Insurance Fraud Detection
+#  Healthcare Insurance Fraud Detection
 
 > **Detecting fraudulent Medicare providers using machine learning on real CMS claims data.**
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Problem Statement
+##  Problem Statement
 
 Healthcare insurance fraud costs the U.S. government **billions of dollars annually**. Fraudulent providers submit inflated, duplicate, or fabricated claims to Medicare — making automated detection critical for financial and public health systems.
 
@@ -18,7 +18,7 @@ This project builds a **binary classification pipeline** to identify whether a M
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 The dataset is sourced from Kaggle: [Healthcare Provider Fraud Detection Analysis](https://www.kaggle.com/datasets/rohitrox/healthcare-provider-fraud-detection-analysis)
 
@@ -33,7 +33,7 @@ All four files are merged at the **Provider** and **BeneID** level to create one
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 healthcare-fraud-detection/
@@ -61,7 +61,7 @@ healthcare-fraud-detection/
 
 ---
 
-## 🔍 Approach
+##  Approach
 
 ### 1. Exploratory Data Analysis (`01_eda.ipynb`)
 - Loaded and merged 4 CSV files (fraud labels, beneficiary, inpatient, outpatient claims)
@@ -92,17 +92,17 @@ Engineered the following features from raw data:
 ### 3. Modelling (`03_modelling.ipynb`)
 Two gradient boosting models were trained and compared:
 
-#### ✅ XGBoost (with GridSearchCV)
+####  XGBoost (with GridSearchCV)
 - Hyperparameter tuning over: `n_estimators`, `max_depth`, `learning_rate`, `subsample`, `colsample_bytree`
 - 3-fold cross-validation with `roc_auc` as scoring metric
 
-#### ✅ LightGBM
+####  LightGBM
 - Faster training, better performance on imbalanced datasets
 - Final model selected for business impact analysis
 
 ---
 
-## 📊 Results
+##  Results
 
 | Model | AUC-ROC |
 |-------|---------|
@@ -111,7 +111,7 @@ Two gradient boosting models were trained and compared:
 
 > *Exact scores depend on your run; AUC-ROC is the primary metric for fraud detection (handles class imbalance better than accuracy)*
 
-### 💼 Business Impact (LightGBM)
+###  Business Impact (LightGBM)
 
 ```
 Fraud claims caught:     [TP value]
@@ -122,7 +122,7 @@ Detection rate:          ~XX%
 
 ---
 
-## 📈 Model Explainability — SHAP
+##  Model Explainability — SHAP
 
 SHAP (SHapley Additive exPlanations) was used to interpret the LightGBM model:
 
@@ -134,7 +134,7 @@ SHAP summary plot gives a global view of feature importance with directionality 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Category | Tools |
 |----------|-------|
@@ -147,7 +147,7 @@ SHAP summary plot gives a global view of feature importance with directionality 
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ```bash
 # Clone the repo
@@ -167,7 +167,7 @@ jupyter notebook notebooks/03_modelling.ipynb
 
 ---
 
-## 🧠 Key Learnings
+##  Key Learnings
 
 - Real-world healthcare data requires **multi-table joins** — merging provider, beneficiary, and claims data is non-trivial
 - **AUC-ROC** is a far better metric than accuracy for imbalanced fraud datasets
@@ -176,7 +176,7 @@ jupyter notebook notebooks/03_modelling.ipynb
 
 ---
 
-## 👤 Author
+##  Author
 
 **Jatin** — B.Tech Engineering Physics, Delhi Technological University  
 GitHub: [@QuantumWebber](https://github.com/QuantumWebber)
